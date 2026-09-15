@@ -1,0 +1,6 @@
+{
+  "name": "Đồ Họa Động Trích Dẫn - Tổng Bí Thư Tô Lâm",
+  "description": "Đồ họa động tương tác trích dẫn thông điệp của Tổng Bí thư, Chủ tịch nước Tô Lâm về chiến dịch 500 ngày đêm tìm kiếm và quy tập hài cốt liệt sĩ.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
