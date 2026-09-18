@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { THEMES } from './data/quoteData';
 import { ThemeId } from './types';
-import { BackgroundParticles } from './components/BackgroundParticles';
 import { KineticQuoteCard } from './components/KineticQuoteCard';
 import { ambientAudio } from './utils/audio';
 
@@ -20,7 +19,7 @@ export default function App() {
     }
   }, [isAudioOn]);
 
-  // Handle Audio toggle via keyboard shortcut
+  // Handle Audio toggle via keyboard shortcut (phím M)
   const handleToggleAudio = useCallback(() => {
     if (isAudioOn) {
       ambientAudio.stop();
@@ -50,22 +49,14 @@ export default function App() {
 
   return (
     <div
-      className={`min-h-screen w-full flex items-center justify-center relative overflow-hidden bg-gradient-to-b ${activeTheme.bgGradient} select-none text-[#FDE68A] p-4 sm:p-6 md:p-8`}
+      className={`min-h-screen w-full flex flex-col items-center justify-center relative overflow-hidden bg-gradient-to-b ${activeTheme.bgGradient} select-none p-3 sm:p-6 md:p-8`}
     >
-      {/* Background Interactive Ambient Particles Canvas */}
-      <BackgroundParticles particleColor="#FDE68A" />
+      {/* Subtle static deep ambient glow in the center */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-red-600/[0.12] blur-[120px] pointer-events-none rounded-full" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-[#FDE68A]/[0.03] blur-[100px] pointer-events-none rounded-full" />
 
-      {/* Vibrant Red Ambient Atmosphere Overlays */}
-      <div className="absolute -top-32 -left-32 w-96 h-96 bg-red-600/25 blur-[120px] pointer-events-none rounded-full" />
-      <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-red-600/30 blur-[120px] pointer-events-none rounded-full" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-red-600/20 blur-[150px] pointer-events-none rounded-full" />
-
-      {/* Decorative Golden Corner Accents */}
-      <div className="absolute top-0 left-0 w-48 h-48 bg-gradient-to-br from-[#FDE68A]/10 to-transparent pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-48 h-48 bg-gradient-to-tl from-[#FDE68A]/10 to-transparent pointer-events-none" />
-
-      {/* Main Content Area - Only the quote inside the frame */}
-      <main className="relative w-full max-w-4xl z-10 flex items-center justify-center">
+      {/* Main Content Area - Max width 700px */}
+      <main className="relative w-full max-w-[700px] z-10 flex flex-col items-center justify-center">
         <KineticQuoteCard
           theme={activeTheme}
           animationKey={animationKey}
