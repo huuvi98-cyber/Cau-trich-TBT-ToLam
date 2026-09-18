@@ -49,7 +49,7 @@ export default function App() {
 
   return (
     <div
-      className={`min-h-screen w-full flex flex-col items-center justify-center relative overflow-hidden bg-gradient-to-b ${activeTheme.bgGradient} select-none p-3 sm:p-6 md:p-8`}
+      className={`h-[500px] w-full flex flex-col items-center justify-center relative overflow-hidden bg-gradient-to-b ${activeTheme.bgGradient} select-none p-3 sm:p-6 md:p-8`}
     >
       {/* Subtle static deep ambient glow in the center */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-red-600/[0.12] blur-[120px] pointer-events-none rounded-full" />

@@ -37,7 +37,7 @@ export const KineticQuoteCard: React.FC<KineticQuoteCardProps> = ({
   const [revealedCount, setRevealedCount] = useState<number>(0);
   const [isDone, setIsDone] = useState<boolean>(false);
 
-  // Progressive kinetic running text with gentle, serene cadence ("chạy ra nhẹ nhàng")
+  // Progressive kinetic running text with dignified, smooth, and slow cadence ("mượt và chậm hơn")
   useEffect(() => {
     setRevealedCount(0);
     setIsDone(false);
@@ -53,8 +53,8 @@ export const KineticQuoteCard: React.FC<KineticQuoteCardProps> = ({
           }
           return prev + 1;
         });
-      }, 165); // Gentle, solemn pacing allowing words to softly bloom
-    }, 280);
+      }, 235); // Slower, solemn kinetic reading pace
+    }, 350);
 
     return () => {
       clearTimeout(timeoutId);
@@ -175,10 +175,10 @@ export const KineticQuoteCard: React.FC<KineticQuoteCardProps> = ({
                   return (
                     <React.Fragment key={idx}>
                       <motion.span
-                        initial={{ opacity: 0, y: 2, filter: 'blur(4px)' }}
+                        initial={{ opacity: 0, y: 3, filter: 'blur(5px)' }}
                         animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-                        transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                        className={`inline-block mr-[0.28em] transition-colors duration-500 ${
+                        transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+                        className={`inline-block mr-[0.28em] transition-colors duration-700 ${
                           isLatest && !isDone ? 'text-[#FFFDEB]' : 'text-[#FDE68A]'
                         }`}
                       >
@@ -192,11 +192,11 @@ export const KineticQuoteCard: React.FC<KineticQuoteCardProps> = ({
                           layoutId="traveling-closing-quote"
                           transition={{
                             type: 'spring',
-                            stiffness: 220,
-                            damping: 28,
-                            mass: 0.8
+                            stiffness: 150,
+                            damping: 26,
+                            mass: 0.85
                           }}
-                          className="inline-block text-3xl sm:text-4xl md:text-5xl font-serif-display text-[#FDE68A] align-bottom leading-none ml-1 select-none filter drop-shadow-[0_0_10px_rgba(253,230,138,0.6)]"
+                          className="inline-block text-3xl sm:text-4xl md:text-5xl font-serif-display text-[#FDE68A] align-bottom leading-none ml-1 select-none filter drop-shadow-[0_0_12px_rgba(253,230,138,0.65)]"
                         >
                           ”
                         </motion.span>
