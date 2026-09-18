@@ -155,7 +155,7 @@ export const KineticQuoteCard: React.FC<KineticQuoteCardProps> = ({
           ))}
 
           {/* Main Full Quote Display with Kinetic Running Text & Traveling Quotation Mark */}
-          <div className="relative my-2 sm:my-2.5 px-1 sm:px-2 min-h-[160px] sm:min-h-[178px] md:min-h-[188px] flex items-start justify-center z-10">
+          <div className="relative my-2 sm:my-2.5 px-2 sm:px-4 min-h-[130px] sm:min-h-[145px] md:min-h-[155px] flex items-start justify-center z-10">
             <LayoutGroup id={`quote-flow-${animationKey}`}>
               <blockquote className="font-serif-quote text-xl sm:text-2xl md:text-[26px] lg:text-[28px] leading-[1.65] md:leading-[1.72] text-[#FDE68A] pale-yellow-glow font-semibold text-center tracking-[0.01em]">
                 {/* Opening quote */}

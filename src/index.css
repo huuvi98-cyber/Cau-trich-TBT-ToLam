@@ -1,7 +1,9 @@
 @import "tailwindcss";
 
 @layer base {
-  body {
+  html, body, #root {
+    min-height: 100%;
+    background-color: #2b0104;
     font-family: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
   }
 }
